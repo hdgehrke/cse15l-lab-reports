@@ -19,7 +19,13 @@ Now that you are within the remote server, you can play around with some command
 
 ![Image](https://raw.githubusercontent.com/hdgehrke/cse15l-lab-reports/main/Screen%20Shot%202023-04-06%20at%2018.41.09.png)
 
-This is just one example of a command you can use in the server, and with that, you have entered a command in a remote server!
+And here are some more commands with more information about the server contained:
+
+![Image](https://raw.githubusercontent.com/hdgehrke/cse15l-lab-reports/main/Screen%20Shot%202023-04-24%20at%2020.41.55.png)
+
+`$ ls -a` lists all the files and folders in the current directory, including some files starting with a `.`. Notably, one file is `hello.txt`, whose contents can be printed with `$ cat hello.txt` But since it is a file and not a folder, changing directory to `hello.txt` gives an error as no such directory exists.
+
+These are just a few examples of commands you can use in the server, and with that, you have entered commands in a remote server!
 
 [1]: https://github.com/hdgehrke/cse15l-lab-reports/blob/main/Screen%20Shot%202023-04-06%20at%2018.18.07.png
 [2]: https://github.com/hdgehrke/cse15l-lab-reports/blob/main/Screen%20Shot%202023-04-06%20at%2018.37.00.png
