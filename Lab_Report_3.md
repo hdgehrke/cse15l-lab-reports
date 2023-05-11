@@ -3,7 +3,7 @@
 Source: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 ## `-C num`
 ```
-$ grep -C3 one cc3.txt 
+$ grep -C3 "one" cc3.txt 
           
           
             Midazolam
@@ -31,7 +31,7 @@ $ grep -C3 one cc3.txt
 This is an example of using the `-C num` option on grep, which takes a number and a pattern, and returns the line(s) containing the pattern plus the specified number of lines before and after the line(s) found.
 This option could be useful if one did not just want to find the line(s) containing a pattern, but context surrounding the lines, perhaps for when searching for a word that has two different connotations.
 ```
-$ grep -C2 two cc343.txt 
+$ grep -C2 "two" cc343.txt 
         white blood counts (WBCs) ≥ 12000/mm 3or ≤ 4000/mm 3; and
         (4) obvious source of infection. Group 1 (definite sepsis)
         had positive blood cultures and two or more criteria; Group
@@ -56,21 +56,21 @@ This is another example, using a different file and pattern, and finding two sur
 Another use for this option could be searching a java class name and then looking in for a commented description or instance variables.
 ## `-c`
 ```
-$ grep -c one cc3.txt 
+$ grep -c "one" cc3.txt 
 3
 ```
 This is an example of using the `-c` option, which counts the number of lines that match the specified pattern.
 Given that the pattern and file are the same as a previous command, we can verify that the number of lines matches the number of chunks given by `-C`.
 This could be used to see how often a function is called in a java file. 
 ```
-$ grep -c two cc343.txt 
+$ grep -c "two" cc343.txt 
 4
 ```
 This is another example of the same option, again repeating a pattern and file combination from earlier. 
 This time, 4 is printed even though `-C` gave 3 chunks because the first chunk contained two lines matching the pattern.
 ## `-w`
 ```
-$ grep -w two cc343.txt 
+$ grep -w "two" cc343.txt 
         had positive blood cultures and two or more criteria; Group
         two or more additional criteria; Group 3 (possible sepsis)
         groups. Twenty-two patients (Groups 1 and 2) met the
@@ -79,7 +79,7 @@ $ grep -w two cc343.txt
 This is an example of using the `-w` option, which only shows the lines that match the whole word of the pattern, instead of only partially.
 Here, all lines found previously match the word given as the pattern exactly (not `...two...` with no spaces around the pattern).
 ```
-$ grep -w one cc3.txt 
+$ grep -w "one" cc3.txt 
             In one study of ICU patients receiving midazolam,
         small purchase price for one monitor spreads out quickly if
 ```
@@ -87,13 +87,13 @@ This is another example of the same option, but this time showing a different nu
 This could be useful for precisely the same behavior we have here; to only find the specified word and not, perharps, a compound word containing the desired word.
 ## `-l`
 ```
-$ grep -l twice cc3.txt cc2171.txt cc105.txt cc103.txt 
+$ grep -l "twice" cc3.txt cc2171.txt cc105.txt cc103.txt 
 cc2171.txt
 ```
 This is an example of using the `-l` option, which shows the files that contain a line that matches the pattern. 
 From this result, we can see that only `cc2171.txt` contains the pattern `twice`.
 ```
-$ grep -l once cc3.txt cc2171.txt cc105.txt cc103.txt cc1856.txt cc1843.txt 
+$ grep -l "once" cc3.txt cc2171.txt cc105.txt cc103.txt cc1856.txt cc1843.txt 
 cc3.txt
 cc105.txt
 cc103.txt
