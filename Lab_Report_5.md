@@ -41,7 +41,7 @@ public class Foo {
     }
 }
 ```
-Tshit.java:
+Tshirt.java:
 ```
 public class Tshirt {
     boolean dyed;
